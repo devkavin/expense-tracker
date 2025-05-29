@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,11 @@ class ExpenseFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
-            //
+            'amount' => fake()->randomFloat(2, 1, 1000),
+            'description' => fake()->sentence(),
+            'date' => now(),
         ];
     }
 }
