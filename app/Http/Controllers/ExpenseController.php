@@ -12,7 +12,8 @@ class ExpenseController extends Controller
      */
     public function index()
     {
-        //
+        $expenses = Expense::all();
+        dd('this');
     }
 
     /**
